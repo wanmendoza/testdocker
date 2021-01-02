@@ -6,7 +6,9 @@ WORKDIR /testdocker
 
 ENV SALUDO=${SALUDO}
 
-RUN sed -i -e 's/Mundo/'${SALUDO}'/g' ./app.js
+ADD . .
+
+RUN sed -i -e 's/Mundo/'${SALUDO}'/g' app.js
 
 
 ENTRYPOINT node app.js
