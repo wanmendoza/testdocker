@@ -12,4 +12,4 @@ USER root
 RUN sed -i -e 's/Mundo/'${SALUDO}'/g' app.js
 
 
-ENTRYPOINT entrypoint.sh && node app.js
+ENTRYPOINT ./entrypoint.sh && node app.js
