@@ -7,8 +7,9 @@ WORKDIR /testdocker
 ENV SALUDO=${SALUDO}
 
 ADD . .
-RUN chmod 755 ./entrypoint.sh
 USER root
+
+RUN chmod 755 ./entrypoint.sh
 
 RUN sed -i -e 's/Mundo/'${SALUDO}'/g' app.js
 
