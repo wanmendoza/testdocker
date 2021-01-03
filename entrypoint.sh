@@ -1,5 +1,5 @@
 #!/bin/bash
-echo Your container args are: "$PARAMETRO"
+echo $PARAMETRO
 
 exec "node ./app.js"
 
