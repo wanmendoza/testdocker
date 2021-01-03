@@ -1,5 +1,6 @@
 #!/bin/bash
-echo $PARAMETRO
+echo "argc = ${#*}"
+echo "argv = ${*}"
 
 exec "node ./app.js"
 
