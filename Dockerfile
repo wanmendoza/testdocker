@@ -14,4 +14,4 @@ RUN chmod 755 ./entrypoint.sh
 RUN sed -i -e 's/Mundo/'${SALUDO}'/g' app.js
 
 
-ENTRYPOINT ./entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
